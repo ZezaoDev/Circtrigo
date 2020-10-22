@@ -1,6 +1,6 @@
-from CTclass import circtrigo
+from funcoes import Circtrigo
 import sys
-t = circtrigo()
+t = Circtrigo()
 class itensmenu():
 
     def __init__(self):
@@ -32,7 +32,7 @@ class itensmenu():
         self.menu()
     
     def iniciar_(self):
-        t.angulo(int(input("Insira o valor do ângulo: ")))
+        t.angulo(float(input("Insira o valor do ângulo: ")))
         input("[ Seno     ]")
         t.sen()
         input("[ Cosseno  ]")
@@ -51,8 +51,8 @@ print("Y88b  d88P 888 888     Y88b.    Y88b.  888     888 Y88b 888 Y88..88P ")
 print("  Y8888P   888 888       Y8888P   Y888 888     888   Y88888   Y88P   ")
 print("                                                        888          ")
 print("                                                   Y8b d88P          ")
-print("v2.3.1                                               Y88P            ")
-print("by José Vitor, Miriã Pedroso, Lívia Mariana, Larissa Amélia, Marineide Almeida.")
+print("v3.0                                                 Y88P            ")
+print("by Zé Dutra.")
 
 im = itensmenu()
 im.menu()
