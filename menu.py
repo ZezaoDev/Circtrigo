@@ -1,7 +1,9 @@
-from funcoes import Circtrigo
+from funcoes import circTrigo
 import sys
-t = Circtrigo()
-class itensmenu():
+t = circTrigo()
+
+
+class itensMenu:
 
     def __init__(self):
         self.opcao = 0
@@ -11,7 +13,7 @@ class itensmenu():
         print("INICIAR (1)")
         print("SAIR    (2)")
         while True:
-            self.opcao = int(input("Selecione a opção: "))
+            self.opcao = int(input("Selecione a opcao: "))
             if self.opcao == 1:
                 self.iniciar()
                 break
@@ -24,21 +26,22 @@ class itensmenu():
         t.eixos()
         self.iniciar_()
         while True:
-            r_sn = str(input("Deseja inserir mais um ângulo (S/n)? "))
+            r_sn = str(input("Deseja inserir mais um angulo (S/n)? "))
             if r_sn == 's' or r_sn == 'S':
                 self.iniciar_()
             else:
                 break
         self.menu()
-    
+
     def iniciar_(self):
-        t.angulo(float(input("Insira o valor do ângulo: ")))
-        input("[ Seno     ]")
+        t.angulo(float(input("Insira o valor do angulo: ")))
+        print("[ Seno     ]")
         t.sen()
-        input("[ Cosseno  ]")
+        print("[ Cosseno  ]")
         t.csen()
-        input("[ Tangente ]")
+        print("[ Tangente ]")
         t.tan()
+
 
 print("                                                                     ")
 print(" .d8888b.  d8b                  888            d8b                   ")
@@ -52,7 +55,7 @@ print("  Y8888P   888 888       Y8888P   Y888 888     888   Y88888   Y88P   ")
 print("                                                        888          ")
 print("                                                   Y8b d88P          ")
 print("v3.0                                                 Y88P            ")
-print("by Zé Dutra.")
+print("by Ze Dutra.")
 
-im = itensmenu()
+im = itensMenu()
 im.menu()

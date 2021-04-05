@@ -1,7 +1,8 @@
 import turtle as t
 import math
 
-class Circtrigo:
+
+class circTrigo:
 
     def __init__(self):
         self.raio = 0
@@ -40,7 +41,7 @@ class Circtrigo:
         t.forward(pixels%10)            
     
     def reset(self):
-        # RETORNA PRA POSIÇÃO INICIAL
+        # RETORNA PRA POSICAO INICIAL
         t.penup()
         t.home()
         t.pendown()
@@ -86,7 +87,7 @@ class Circtrigo:
         self.seno = math.sin(math.radians(self.grau))
         self.cosseno = math.cos(math.radians(self.grau))
         self.tangente = math.tan(math.radians(self.grau))
-        # DEFINE O QUADRANTE DO ÂNGULO
+        # DEFINE O QUADRANTE DO ANGULO
         vquad = self.grau
         if 0 < vquad < 90:
             self.quadrante = 1
@@ -96,7 +97,7 @@ class Circtrigo:
             self.quadrante = 3
         elif 270 < vquad < 360:
             self.quadrante = 4
-        if vquad == 0 or vquad == 90 or vquad == 180 or vquad == 270 or vquad == 360:   # Quadrante 0 representa os ângulos de resultados indefinidos
+        if vquad == 0 or vquad == 90 or vquad == 180 or vquad == 270 or vquad == 360:   # Quadrante 0 representa os angulos de resultados indefinidos
             self.quadrante = 0
 
     def sen(self):
@@ -129,7 +130,7 @@ class Circtrigo:
             t.forward(self.seno * self.raio)
             print (self.seno)
         else: 
-            print("Erro: ângulo inválido")
+            print("Erro: angulo invalido")
         self.reset()
     
     def csen(self):
@@ -162,7 +163,7 @@ class Circtrigo:
             t.forward(self.cosseno * self.raio)
             print (self.cosseno)
         else: 
-            print("Erro: ângulo inválido")
+            print("Erro: angulo invalido")
         self.reset()
     
     def tan(self):
@@ -201,6 +202,6 @@ class Circtrigo:
             t.forward(self.tangente * self.raio)
             print (self.tangente)
         else: 
-            print("Erro: ângulo inválido")
+            print("Erro: angulo invalido")
         self.reset()
     
